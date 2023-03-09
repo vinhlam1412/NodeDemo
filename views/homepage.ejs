@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs')%>
+    </head>
+
+    <body>
+        <%- include('includes/navigation.ejs')%>
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Products List</h1>
+                            <% if(products.length){ %>
+                                <% for(let product of products){%>
+                                    <h3>
+                                        <%=product.title%>
+                                    </h3>
+                                    <%}%>
+                                        <div>Product Available</div>
+                                        <% } else { %>
+                                            <div>No Products Available</div>
+                                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+    </body>
+    <%- include('includes/footer.ejs')%>
+
+        </html>
